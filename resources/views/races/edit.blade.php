@@ -3,7 +3,7 @@
 @section('content')
 {{ 'Mettre a jour une race' }}
 
-      <form method="post" action= "{{ route('race.update') }}">
+      <form class="formulaire"method="post" action= "{{ route('race.update') }}">
           @csrf
           <label for="name">RACE NAME</label>
           <input type="hidden" name="id" value="{{ $race->id }}">

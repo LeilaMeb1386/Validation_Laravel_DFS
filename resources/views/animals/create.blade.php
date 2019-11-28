@@ -15,7 +15,7 @@
           @endforeach
       </ul>
     @endif
-    <form method="post" action= "{{ route('store') }}">
+    <form class="formulaire"method="post" action= "{{ route('store') }}">
   @csrf
      <label for="name">Name</label><input type="text" name="name"/>
      <label for="name">Déscription</label><textarea name="description" rows="8" cols="80">description</textarea>

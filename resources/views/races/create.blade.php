@@ -1,11 +1,11 @@
 @extends('layouts.template')
 
-
-{{ 'Liste des races' }}
 @section('content')
+{{ 'Liste des races' }}
+
     <h1>AJOUT D'UNE RACE</h1>
 
-    <form method="post" action= "{{ route('race.store') }}">
+    <form class="formulaire"method="post" action= "{{ route('race.store') }}">
   @csrf
      <label for="name">RACE NAME</label><input type="text" name="name"/>
      <label for="classification">CLASSIFICATION</label><input type="text" name="classification" />

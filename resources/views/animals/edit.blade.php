@@ -3,18 +3,18 @@
 @section('content')
 {{ 'Mettre a jour une fiche animal' }}
 
-      <form method="post" action= "{{ route('update') }}">
+      <form class="formulaire"method="post" action= "{{ route('update') }}">
           @csrf
-          <label for="name">Animal NAME</label>
+          <label for="name">ANIMAL NAME</label>
           <input type="hidden" name="id" value="{{ $animal->id }}">
           <input required type="text" name="name" value="{{ $animal->name }}">
-          <label for="description">DESCRIPTIOn</label>
+          <label for="description">DESCRIPTION</label>
           <textarea name="description" rows="8" cols="80">{{ $animal->description }}</textarea>
           <label for="name">SEXE</label>
           <input required type="text" name="sexe" value="{{ $animal->sexe }}">
-          <label for="name">APOIDSE</label>
+          <label for="name">POIDS</label>
           <input required type="text" name="poids" value="{{ $animal->poids }}">
-          <label for="name">TAILLE/label>
+          <label for="name">TAILLE</label>
           <input required type="text" name="taille" value="{{ $animal->taille }}">
           <label for="name">RACE</label>
           <select  class="" name="race">

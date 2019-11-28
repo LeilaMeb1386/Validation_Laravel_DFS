@@ -6,7 +6,7 @@ h1 {
     text-align: center;
 }
 
-form {
+.formulaire {
     width: 50vw;
     margin: auto;
     display: grid;

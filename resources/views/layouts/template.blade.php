@@ -18,10 +18,10 @@
                       <ul class="navbar-nav mr-auto">
 
                           <li class="nav-item">
-                              <a class="nav-link" href="{{ route('animals') }}">List des animaux</a>
+                              <a class="nav-link" href="{{ route('animals') }}">Liste des animaux</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="{{ route('races') }}">List des races</a>
+                              <a class="nav-link" href="{{ route('races') }}">Liste des races</a>
                           </li>
                           @if(Auth::id() === 1)
                             <li class="nav-item">
