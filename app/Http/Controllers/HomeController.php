@@ -25,4 +25,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function animalIndex()
+    {
+      return view('show');
+      // var_dump("hi");die;
+
+    }
 }
