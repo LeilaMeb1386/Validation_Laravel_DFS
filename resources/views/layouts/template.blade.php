@@ -10,7 +10,7 @@
 <body>
     <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="/">Laraclette</a>
+                    <a class="navbar-brand" href="/">ACCUEIL</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -20,9 +20,15 @@
                           <li class="nav-item">
                               <a class="nav-link" href="{{ route('animals') }}">List des animaux</a>
                           </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ route('races') }}">List des races</a>
+                          </li>
                           @if(Auth::id() === 1)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('create') }}">Créer un animal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('race.create') }}">Créer une race</a>
                             </li>
                           @endif
                         @guest
@@ -52,6 +58,7 @@
                       </ul>
                         {{-- <ul class="navbar-text">
                             <li>animalIndex</li>
+
                         </ul> --}}
                     </div>
                   </nav>

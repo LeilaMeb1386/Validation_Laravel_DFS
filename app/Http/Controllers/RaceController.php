@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Race;
 
 class RaceController extends Controller
 {
@@ -13,7 +14,8 @@ class RaceController extends Controller
      */
     public function index()
     {
-        //
+      $races = Race::All();
+      return view('races.show', compact('races'));
     }
 
     /**
@@ -23,7 +25,9 @@ class RaceController extends Controller
      */
     public function create()
     {
-        //
+
+      return view('races.create');
+
     }
 
     /**
@@ -34,7 +38,16 @@ class RaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $race= new Race([
+        'name' => $request->name,
+        'classification' => $request->classification,
+        'esperence_vie' => $request->esperence_vie,
+
+      ]);
+
+      $race->save();
+
+      return redirect('races')->with('status', 'Ajout avec succées!');
     }
 
     /**
@@ -56,7 +69,9 @@ class RaceController extends Controller
      */
     public function edit($id)
     {
-        //
+      $race = Race::find($id);
+
+      return view('races.edit', compact('race'));
     }
 
     /**
@@ -66,9 +81,15 @@ class RaceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+      $race = Race::find($request->id);
+      $race->name = $request->name;
+      $race->classification = $request->classification;
+      $race->esperence_vie = $request->esperence_vie;
+
+      $race->save();
+       return redirect('races');
     }
 
     /**
@@ -77,8 +98,10 @@ class RaceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+      $race = Race::find($request->id);
+      $race->delete();
+      return redirect('races')->with('status', 'suppression éfféctuée avec succées!');
     }
 }

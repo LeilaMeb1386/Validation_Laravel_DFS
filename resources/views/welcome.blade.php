@@ -73,17 +73,19 @@
                         <a href="{{ route('login') }}">Login</a>
 
 
+
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                  LES NANIMAUX
                 </div>
 
                 <div class="links">
                   <a href="/animals">Animals</a>
+                  <a href="/races">Races</a>
                 </div>
             </div>
         </div>

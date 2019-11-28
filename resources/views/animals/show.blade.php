@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-{{ 'Liste des livres' }}
+{{ 'Liste des animaux' }}
 
         <div class="container">
             <div class="card-group mb-5">

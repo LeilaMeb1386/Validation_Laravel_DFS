@@ -32,4 +32,11 @@ class HomeController extends Controller
       // var_dump("hi");die;
 
     }
+
+    public function raceIndex()
+    {
+      return view('show');
+      // var_dump("hi");die;
+
+    }
 }
